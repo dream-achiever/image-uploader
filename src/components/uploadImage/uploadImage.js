@@ -4,7 +4,18 @@ import Footer from "../../common/component/footer.js";
 import { ProgressBar, Button } from "react-bootstrap";
 import React, { useState, useRef } from "react";
 import { FaCopy } from "react-icons/fa";
+import { useMediaQuery } from "react-responsive";
+
 function UploadImage() {
+  const isMobileDevice = useMediaQuery({ query: "(max-width: 450px)" });
+  const isTabletDevice = useMediaQuery({
+    query: "(min-width: 451px) and (max-width: 1200px)",
+  });
+  const isLaptop = useMediaQuery({
+    query: "(min-width: 1201px) and (max-width: 1600px)",
+  });
+  const isDesktop = useMediaQuery({ query: "(min-width: 1601px)" });
+
   const filesRef = useRef([]);
   const [uploadStatus, setUploadStatus] = useState("Upload");
   const uploadCompletedRef = useRef(false);
@@ -69,7 +80,11 @@ function UploadImage() {
   };
 
   return (
-    <div className="container">
+    <div
+      className={` ${isMobileDevice ? "mobile" : ""} ${
+        isTabletDevice ? "tablet" : ""
+      } ${isLaptop ? "laptop" : ""} ${isDesktop ? "desktop" : ""} `}
+    >
       {uploadStatus === "Upload" && (
         <div id="div1" className="display">
           <h1 className="heading">Upload your Image</h1>
