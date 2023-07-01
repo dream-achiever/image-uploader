@@ -1,9 +1,5 @@
 .footer {
-  position: relative;
-  width: 287px;
-  height: 17px;
-  left: 35px;
-  top: 300px;
+  margin: 5% auto;
   display: flex;
   flex-direction: column;
   font-family: "Montserrat";

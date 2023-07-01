@@ -1,7 +1,7 @@
 import "../../components/uploadImage/uploadImage.css";
 import CheckCircleRoundedIcon from "@mui/icons-material/CheckCircleRounded";
 import Footer from "../../common/component/footer.js";
-import { ProgressBar, Button } from "react-bootstrap";
+import { ProgressBar } from "react-bootstrap";
 import React, { useState, useRef } from "react";
 import { FaCopy } from "react-icons/fa";
 import { useMediaQuery } from "react-responsive";
@@ -86,7 +86,7 @@ function UploadImage() {
       } ${isLaptop ? "laptop" : ""} ${isDesktop ? "desktop" : ""} `}
     >
       {uploadStatus === "Upload" && (
-        <div id="div1" className="display">
+        <div>
           <h1 className="heading">Upload your Image</h1>
           <h2 className="subHeading">File should be Jpeg,Png,...</h2>
           <div
@@ -122,7 +122,7 @@ function UploadImage() {
       )}
 
       {uploadStatus === "Uploading" && !uploadCompletedRef.current && (
-        <div id="div2" className="display">
+        <div>
           <h1 className="heading">Uploading ...</h1>
           <br />
           <ProgressBar>
@@ -140,14 +140,15 @@ function UploadImage() {
       )}
 
       {uploadCompletedRef.current && (
-        <div id="div3" className="display">
-          <CheckCircleRoundedIcon
-            className="heading"
-            style={{ left: "175px" }}
-            color="success"
-          />
+        <div className="heading">
+          <CheckCircleRoundedIcon color="success" />
           <h1 className="heading">Uploaded Successfully</h1>
-          <ul>
+          <ul
+            style={{
+              padding: "5%",
+              textAlign: "center",
+            }}
+          >
             {filesRef.current.map((file, index) => (
               <div key={index}>
                 <br />
@@ -155,17 +156,14 @@ function UploadImage() {
                   src={URL.createObjectURL(file.file)}
                   alt=""
                   height="200px"
-                  width="300px"
                   style={{
                     borderRadius: "8px",
+                    margin: "2% auto",
                   }}
                 />
                 <br />
                 <br />
                 <p className="clipboard">
-                  <Button style={{ height: "32px", display: "none" }}>
-                    Copy Link
-                  </Button>
                   <FaCopy
                     style={{
                       marginRight: "5px",

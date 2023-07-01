@@ -3,8 +3,8 @@
   flex-direction: column;
   width: fit-content;
   flex-grow: 1;
-  min-height: fit-content;
-  margin: 5% 5% 5% 5%;
+  max-height: fit-content;
+  margin: 5%;
   align-self: center;
   background: #ffffff;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
@@ -17,7 +17,7 @@
   width: fit-content;
   flex-grow: 1;
   min-height: fit-content;
-  margin: 5% 5% 5% 5%;
+  margin: 5%;
   align-self: center;
   background: #ffffff;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
@@ -25,13 +25,13 @@
 }
 
 .laptop {
-  position: absolute;
+  position: flex;
   display: flex;
   flex-direction: column;
   width: 402px;
   flex-grow: 1;
   min-height: fit-content;
-  margin: 5% 5% 5% 5%;
+  margin: 5%;
   align-self: center;
   background: #ffffff;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
@@ -39,178 +39,137 @@
 }
 
 .desktop {
-  position: absolute;
+  position: flex;
   display: flex;
   flex-direction: column;
   width: 402px;
   flex-grow: 1;
   min-height: fit-content;
-  margin: 5% 5% 5% 5%;
+  margin: 5%;
   align-self: center;
   background: #ffffff;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
 }
 
-.container {
-  position: absolute;
+.heading {
   display: flex;
   flex-direction: column;
-  width: 402px;
-  flex-grow: 1;
-  /*
-  min-height: 440px;
-  max-height: max-content;
-  */
-  min-height: fit-content;
-  left: 519.82px;
-  top: 150px;
-  background: #ffffff;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
-}
-
-.heading {
-  position: relative;
-  width: 165px;
-  height: 26.99px;
-  /*left: 645.97px;*/
-  left: 120px;
-  /*top: 160px;*/
-  top: 20px;
-
+  width: auto;
+  height: auto;
+  align-items: center;
+  margin: 5% auto;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
   /* identical to box height */
-
   letter-spacing: -0.035em;
-
   /* Gray 2 */
-
   color: #4f4f4f;
 }
 
 .subHeading {
-  position: relative;
-  width: 121px;
-  height: 14.99px;
-  left: 120px;
-  top: 20px;
-
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  align-items: center;
+  margin: 5% auto;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
   font-size: 10px;
   line-height: 15px;
   /* identical to box height */
-
   text-align: center;
   letter-spacing: -0.035em;
-
   /* Gray 3 */
-
   color: #828282;
 }
 
 .dragBody {
   box-sizing: border-box;
-
-  position: sticky;
   display: flex;
   flex-direction: column;
-  min-height: 218.9px;
+  margin: 5%;
+  min-height: 220px;
   max-height: max-content;
-  width: 338px;
-  /*height: 218.9px;*/
-  left: 551.82px;
-  top: 250px;
-  margin-bottom: 20px;
+  width: auto;
   background: #f6f8fb;
   border: 1px dashed #97bef4;
   border-radius: 12px;
 }
 
 .textName {
-  position: relative;
-  width: 14px;
-  height: 17.99px;
-  left: 170px;
-  top: 80px;
-
+  display: flex;
+  flex-direction: column;
+  margin: 5% auto;
+  width: auto;
+  height: auto;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
   /* identical to box height */
-
   text-align: center;
   letter-spacing: -0.035em;
-
   /* Gray 4 */
-
   color: #bdbdbd;
 }
 
 .button {
-  position: relative;
-  width: 120px;
-  height: 31.98px;
-  left: 120px;
-  top: 100px;
-
+  display: flex;
+  flex-direction: column;
+  margin: 5% auto;
+  width: max-content;
+  height: auto;
   /* Blue 1 */
-
   background: #2f80ed;
   border-radius: 8px;
-
   font-family: "Noto Sans";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 16px;
-  text-align: center;
   letter-spacing: -0.035em;
-
   color: #ffffff;
 }
 
 .dragText {
   position: sticky;
-  width: 166.01px;
-  height: 17.99px;
-  left: 660px;
-  top: 420px;
-
+  width: auto;
+  height: fit-content;
+  margin: auto;
+  margin-top: 100%;
+  margin-bottom: 5%;
+  text-align: center;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
   /* identical to box height */
-
   letter-spacing: -0.035em;
-
   /* Gray 4 */
-
   color: #bdbdbd;
 }
 
 .clipboard {
   box-sizing: border-box;
-
-  position: sticky;
-  width: 338px;
-  height: 50px;
-  left: 551px;
-  top: 696.03px;
-
+  display: flex;
+  flex-direction: column;
+  padding: 5% auto;
+  width: fit-content;
+  height: auto;
   background: #f6f8fb;
   /* Gray 5 */
-
   border: 1px solid #e0e0e0;
   border-radius: 8px;
+}
+
+div {
+  display: flexbox;
 }

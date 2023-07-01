@@ -1,10 +1,9 @@
 /* ImageUploader */
 
 .imageUploader {
-  position: relative;
+  display: flex;
   width: 100%;
   height: 100%;
-  display: flex;
   flex-direction: column;
   background: #fafafb;
   /*border-radius: 8px;*/
